@@ -1,0 +1,122 @@
+/* Basic Reset & Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5; /* Light gray background */
+    color: #333;
+}
+
+/* Container for the app */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+/* Heading */
+h1 {
+    color: #007bff; /* Trinck blue */
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/* Input Group for numbers */
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Space between inputs and operator */
+    margin-bottom: 25px;
+}
+
+.input-group input[type="number"] {
+    width: 120px;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    -moz-appearance: textfield; /* Hide Firefox number input arrows */
+}
+
+/* Hide Chrome/Safari/Edge number input arrows */
+.input-group input[type="number"]::-webkit-outer-spin-button,
+.input-group input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-group input[type="number"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.input-group .operator {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #6c757d;
+}
+
+/* Calculate Button */
+button {
+    background-color: #007bff; /* Trinck blue */
+    color: #ffffff;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 200px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #004085;
+    transform: translateY(0);
+}
+
+/* Result Area */
+.result-area {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.result-area #result {
+    font-weight: 500;
+}
+
+.result-area .result-value {
+    font-weight: bold;
+    color: #28a745; /* Green for result */
+    margin-left: 5px;
+}
+
+/* Error Message */
+.error {
+    color: #dc3545; /* Red for errors */
+    font-size: 0.95em;
+    margin-top: 15px;
+    min-height: 20px; /* To prevent layout shift when error appears */
+}
