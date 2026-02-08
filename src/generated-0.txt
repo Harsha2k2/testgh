@@ -1,0 +1,8 @@
+testgh/
+├── public/
+│   ├── index.html
+│   ├── style.css
+│   └── app.js  <-- Compiled from app.ts
+├── src/
+│   └── app.ts
+└── tsconfig.json
